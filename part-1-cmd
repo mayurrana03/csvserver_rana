@@ -1,0 +1,1 @@
+docker run -d  --netowrk prom-net  -p 9393:9300  --env CSVSERVER_BORDER: Orange -v /home/mayur/Desktop/infra_cloud_Task/csvserver/solution/inputFile:/csvserver/inputdata 8cb989ef80b5

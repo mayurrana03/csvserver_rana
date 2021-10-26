@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s 
+
+  external_labels:
+    monitor: 'codelab-monitor'
+    
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'csvserver_records'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 5m
+
+    static_configs:
+      - targets: ['localhost:9090']
